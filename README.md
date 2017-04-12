@@ -1,0 +1,2 @@
+# Benchmarks
+Playground with BenchmarksDotNet
