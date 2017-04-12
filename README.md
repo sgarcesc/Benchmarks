@@ -1,2 +1,2 @@
 # Benchmarks
-Playground with BenchmarksDotNet
+Playground with [BenchmarksDotNet](https://github.com/dotnet/BenchmarkDotNet)
