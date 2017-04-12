@@ -24,8 +24,13 @@ bld/
 
 # Visual Studio 2015 cache/options directory
 .vs/
-# Uncomment if you have tasks that create the project's static files in wwwroot
-#wwwroot/
+.vscode/
+
+#project's static files in wwwroot
+**/wwwroot/dist/*
+
+# Workaround for https://github.com/aspnet/JavaScriptServices/issues/235
+!**/wwwroot/dist/_placeholder.txt
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
@@ -190,7 +195,9 @@ ClientBin/
 *.dbproj.schemaview
 *.pfx
 *.publishsettings
-node_modules/
+[Nn]ode_[Mm]odules/
+[Jj]spm_packages/
+[Tt]ypings/
 orleans.codegen.cs
 
 # Since there are multiple workflows, uncomment next line to ignore bower_components
@@ -250,3 +257,5 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+
+/pingme.txt
