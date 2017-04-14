@@ -6,7 +6,7 @@ namespace Benchmarks
     {
         static void Main(string[] args)
         {
-            BenchmarkRunner.Run<YieldVsNewBechmark>();
+            BenchmarkRunner.Run<VarVsConcreteTypeBenchmark>();
         }
     }
 }

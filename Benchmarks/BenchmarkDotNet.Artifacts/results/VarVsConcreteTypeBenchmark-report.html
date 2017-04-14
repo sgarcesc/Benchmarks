@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>VarVsConcreteTypeBenchmark</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.10.3.0, OS=Microsoft Windows 10.0.15063
+Processor=Intel(R) Core(TM) i7-6700HQ CPU 2.60GHz, ProcessorCount=8
+Frequency=2531248 Hz, Resolution=395.0620 ns, Timer=TSC
+dotnet cli version=1.0.1
+  [Host]     : .NET Core 4.6.25009.03, 64bit RyuJIT
+  DefaultJob : .NET Core 4.6.25009.03, 64bit RyuJIT
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>Elements</th><th>Mean</th><th>StdErr</th><th>StdDev</th><th>Median</th><th>Rank</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>   Var</td><td>-2147483648</td><td>0.0001 ns</td><td>0.0001 ns</td><td>0.0005 ns</td><td>0.0000 ns</td><td>1</td><td>0 B</td>
+</tr><tr><td>ConcreteType</td><td>-2147483648</td><td>0.0100 ns</td><td>0.0029 ns</td><td>0.0112 ns</td><td>0.0058 ns</td><td>1</td><td>0 B</td>
+</tr><tr><td>   Var</td><td>    0</td><td>0.0464 ns</td><td>0.0054 ns</td><td>0.0208 ns</td><td>0.0504 ns</td><td>1</td><td>0 B</td>
+</tr><tr><td>ConcreteType</td><td>    0</td><td>0.0594 ns</td><td>0.0101 ns</td><td>0.0391 ns</td><td>0.0547 ns</td><td>1</td><td>0 B</td>
+</tr><tr><td>   Var</td><td>  100</td><td>0.0937 ns</td><td>0.0170 ns</td><td>0.0832 ns</td><td>0.1009 ns</td><td>1</td><td>0 B</td>
+</tr><tr><td>ConcreteType</td><td>  100</td><td>0.0324 ns</td><td>0.0104 ns</td><td>0.0404 ns</td><td>0.0000 ns</td><td>1</td><td>0 B</td>
+</tr><tr><td>   Var</td><td> 1000</td><td>0.0000 ns</td><td>0.0000 ns</td><td>0.0001 ns</td><td>0.0000 ns</td><td>1</td><td>0 B</td>
+</tr><tr><td>ConcreteType</td><td> 1000</td><td>0.0407 ns</td><td>0.0104 ns</td><td>0.0403 ns</td><td>0.0267 ns</td><td>1</td><td>0 B</td>
+</tr><tr><td>   Var</td><td>10000</td><td>0.0177 ns</td><td>0.0059 ns</td><td>0.0230 ns</td><td>0.0116 ns</td><td>1</td><td>0 B</td>
+</tr><tr><td>ConcreteType</td><td>10000</td><td>0.0170 ns</td><td>0.0042 ns</td><td>0.0157 ns</td><td>0.0122 ns</td><td>1</td><td>0 B</td>
+</tr><tr><td>   Var</td><td>100000</td><td>0.0100 ns</td><td>0.0037 ns</td><td>0.0144 ns</td><td>0.0005 ns</td><td>1</td><td>0 B</td>
+</tr><tr><td>ConcreteType</td><td>100000</td><td>0.0135 ns</td><td>0.0033 ns</td><td>0.0126 ns</td><td>0.0150 ns</td><td>1</td><td>0 B</td>
+</tr><tr><td>   Var</td><td>1000000</td><td>0.0138 ns</td><td>0.0048 ns</td><td>0.0159 ns</td><td>0.0048 ns</td><td>1</td><td>0 B</td>
+</tr><tr><td>ConcreteType</td><td>1000000</td><td>0.0000 ns</td><td>0.0000 ns</td><td>0.0000 ns</td><td>0.0000 ns</td><td>1</td><td>0 B</td>
+</tr><tr><td>   Var</td><td>2147483647</td><td>0.0025 ns</td><td>0.0014 ns</td><td>0.0055 ns</td><td>0.0000 ns</td><td>1</td><td>0 B</td>
+</tr><tr><td>ConcreteType</td><td>2147483647</td><td>0.0077 ns</td><td>0.0027 ns</td><td>0.0104 ns</td><td>0.0024 ns</td><td>1</td><td>0 B</td>
+</tr></tbody></table>
+</body>
+</html>

@@ -13,28 +13,28 @@
 </head>
 <body>
 <pre><code>
-BenchmarkDotNet=v0.10.3.0, OS=Microsoft Windows 10.0.14393
+BenchmarkDotNet=v0.10.3.0, OS=Microsoft Windows 10.0.15063
 Processor=Intel(R) Core(TM) i7-6700HQ CPU 2.60GHz, ProcessorCount=8
-Frequency=2531249 Hz, Resolution=395.0619 ns, Timer=TSC
-dotnet cli version=1.0.3
+Frequency=2531248 Hz, Resolution=395.0620 ns, Timer=TSC
+dotnet cli version=1.0.1
   [Host]     : .NET Core 4.6.25009.03, 64bit RyuJIT
   DefaultJob : .NET Core 4.6.25009.03, 64bit RyuJIT
 </code></pre>
 <pre><code></code></pre>
 
 <table>
-<thead><tr><th>Method</th><th>Elements</th><th>       Mean</th><th>   StdDev</th><th>Rank</th><th>Gen 0</th><th>Gen 1</th><th>Gen 2</th><th>Allocated</th>
+<thead><tr><th>Method</th><th>Elements</th><th>       Mean</th><th>  StdErr</th><th>   StdDev</th><th>     Median</th><th>Rank</th><th>Gen 0</th><th>Gen 1</th><th>Gen 2</th><th>Allocated</th>
 </tr>
-</thead><tbody><tr><td>Yiel</td><td>100</td><td>  8.2030 ns</td><td>0.2761 ns</td><td>1</td><td>0.0119</td><td> -</td><td> -</td><td>40 B</td>
-</tr><tr><td>New</td><td>100</td><td>508.1384 ns</td><td>10.0105 ns</td><td>2</td><td>0.3543</td><td> -</td><td> -</td><td>1.19 kB</td>
-</tr><tr><td>Yiel</td><td>1000</td><td>  8.3043 ns</td><td>0.1134 ns</td><td>1</td><td>0.0119</td><td> -</td><td> -</td><td>40 B</td>
-</tr><tr><td>New</td><td>1000</td><td>3,609.3849 ns</td><td>46.4639 ns</td><td>3</td><td>2.4913</td><td> -</td><td> -</td><td>8.41 kB</td>
-</tr><tr><td>Yiel</td><td>10000</td><td>  8.2801 ns</td><td>0.1719 ns</td><td>1</td><td>0.0119</td><td> -</td><td> -</td><td>40 B</td>
-</tr><tr><td>New</td><td>10000</td><td>37,430.7415 ns</td><td>330.3725 ns</td><td>4</td><td>40.4215</td><td> -</td><td> -</td><td>131.32 kB</td>
-</tr><tr><td>Yiel</td><td>100000</td><td>  8.2885 ns</td><td>0.1920 ns</td><td>1</td><td>0.0119</td><td> -</td><td> -</td><td>40 B</td>
-</tr><tr><td>New</td><td>100000</td><td>429,421.4145 ns</td><td>9,908.5169 ns</td><td>5</td><td>266.4063</td><td>266.4063</td><td>266.4063</td><td>1.05 MB</td>
-</tr><tr><td>Yiel</td><td>1000000</td><td>  8.2701 ns</td><td>0.1626 ns</td><td>1</td><td>0.0119</td><td> -</td><td> -</td><td>40 B</td>
-</tr><tr><td>New</td><td>1000000</td><td>5,928,203.1650 ns</td><td>110,409.2057 ns</td><td>6</td><td>406.2500</td><td>375.0000</td><td>375.0000</td><td>7.6 MB</td>
+</thead><tbody><tr><td>Yiel</td><td>100</td><td>  9.9308 ns</td><td>0.1564 ns</td><td>1.0255 ns</td><td>  9.6826 ns</td><td>4</td><td>0.0119</td><td> -</td><td> -</td><td>40 B</td>
+</tr><tr><td>New</td><td>100</td><td>598.0073 ns</td><td>3.2491 ns</td><td>12.5838 ns</td><td>596.2830 ns</td><td>5</td><td>0.3558</td><td> -</td><td> -</td><td>1.19 kB</td>
+</tr><tr><td>Yiel</td><td>1000</td><td>  9.3292 ns</td><td>0.0773 ns</td><td>0.2995 ns</td><td>  9.3381 ns</td><td>3</td><td>0.0119</td><td> -</td><td> -</td><td>40 B</td>
+</tr><tr><td>New</td><td>1000</td><td>4,142.6911 ns</td><td>23.7387 ns</td><td>91.9398 ns</td><td>4,139.6774 ns</td><td>6</td><td>2.5075</td><td> -</td><td> -</td><td>8.41 kB</td>
+</tr><tr><td>Yiel</td><td>10000</td><td>  7.9609 ns</td><td>0.1367 ns</td><td>0.7855 ns</td><td>  7.6735 ns</td><td>1</td><td>0.0119</td><td> -</td><td> -</td><td>40 B</td>
+</tr><tr><td>New</td><td>10000</td><td>37,996.5216 ns</td><td>86.7576 ns</td><td>324.6171 ns</td><td>38,074.0921 ns</td><td>7</td><td>40.3239</td><td> -</td><td> -</td><td>131.32 kB</td>
+</tr><tr><td>Yiel</td><td>100000</td><td>  8.5246 ns</td><td>0.1443 ns</td><td>0.6289 ns</td><td>  8.4945 ns</td><td>2</td><td>0.0119</td><td> -</td><td> -</td><td>40 B</td>
+</tr><tr><td>New</td><td>100000</td><td>440,454.6967 ns</td><td>4,394.5064 ns</td><td>35,429.6435 ns</td><td>424,320.1398 ns</td><td>8</td><td>266.9271</td><td>266.9271</td><td>266.9271</td><td>1.05 MB</td>
+</tr><tr><td>Yiel</td><td>1000000</td><td>  8.0445 ns</td><td>0.1351 ns</td><td>0.5731 ns</td><td>  7.9895 ns</td><td>1</td><td>0.0119</td><td> -</td><td> -</td><td>40 B</td>
+</tr><tr><td>New</td><td>1000000</td><td>6,185,077.2121 ns</td><td>44,174.8475 ns</td><td>171,088.4488 ns</td><td>6,137,870.5905 ns</td><td>9</td><td>282.8947</td><td>251.6447</td><td>251.6447</td><td>7.68 MB</td>
 </tr></tbody></table>
 </body>
 </html>
